@@ -1,4 +1,5 @@
-import gevent.monkey; gevent.monkey.patch_all(thread=False, subprocess=False)
+#import gevent.monkey; gevent.monkey.patch_all(thread=False, subprocess=False)
+import gevent.monkey; gevent.monkey.patch_all(thread=False)
 if not hasattr(gevent, "wait"):
   def mywait(timeout=None):
     return gevent.run(timeout)
